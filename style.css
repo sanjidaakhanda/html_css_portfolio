@@ -23,12 +23,28 @@ z-index: 0;
 
 }
 .logo{
+    position: relative;
 font-size: 25px;
 color: #ededed;
 text-decoration: none;
 font-weight: 600;
 
 }
+
+.logo::before{
+content: '';
+position: absolute;
+top: 0;
+right: 0;
+width: 100%;
+height: 100%;
+background: #081b29;
+animation: showRight 1s ease forwards;
+animation-delay: .4s;
+
+}
+
+
 .navbar a{
     font-size: 18px;
     color: #ededed;
@@ -50,23 +66,65 @@ display: flex;
 align-items: center;
 color: #ededed;
 padding: 0 10%;
+
 }
 .home-content h1 {
+    position: relative;
     font-size: 50px;
-    font-weight: 700;
+    font-weight: 700; 
     line-height: 1.2;
 }
+
+.home-content h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: .8s;
+    
+    }
 .home-content h3 {
+    position: relative;
     font-size: 32px;
     font-weight: 700;
     color:#00abf0;
 }
+.home-content h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.3s;
+    
+    }
 .home-content p {
+    position: relative;
 font-size:16px;
 margin: 30px 0 40px;
 
 }
+.home-content p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.6s;
+    
+    }
 .home-content .btn-box{
+
     display: flex;
     justify-content: space-between;
 width: 345px;
@@ -74,6 +132,7 @@ height: 50px;
 
 
 }
+
 .btn-box a {
 width: 150px;
 height: 100%;
@@ -95,18 +154,66 @@ overflow: hidden;
 
 }
 .btn-box a::before{
-content: "";
+content: '';
 position: absolute;
 top: 0;
 left: 0;
 width: 0;
 height: 100%;
-background: red;
+background: white;
 z-index: -1;
 transition: .5s;
 
 }
 .btn-box a:hover::before{
 width: 100%;
+
+}
+.home-sci{  
+position: absolute;
+bottom: 10px;
+width: 170px;
+display: flex;
+justify-content: space-between;
+
+}
+.home-sci a {
+    position: relative;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+width: 40px;
+height: 40px;
+background: transparent;
+border: 2px solid  #00abf0;
+border-radius: 50%;
+font-size: 20px;
+color: #00abf0;
+text-decoration: none;
+z-index: 1;
+overflow: hidden;
+}
+.home-sci a::before{
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 0;
+height: 100%;
+z-index: -1;
+transition: .5s;
+background:white ;
+}
+
+.home-sci a:hover::before{
+width: 100%;
+
+
+}
+@keyframes showRight{
+
+100%{
+    width: 0;
+}
 
 }
